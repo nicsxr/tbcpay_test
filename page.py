@@ -18,13 +18,13 @@ class HomePage(BasePage):
     def is_navBar_found(self):
         return self.driver.find_element(*HomePageLocator.NAVBAR)
     def is_services_matches(self):
-        return "სერვისები" == self.driver.find_element(*HomePageLocator.SERVICES_NAV).get_attribute("innerHTML")
+        return self.driver.find_element(*HomePageLocator.SERVICES_NAV)
     def is_transfers_matches(self):
-        return "გადარიცხვები" == self.driver.find_element(*HomePageLocator.TRAMSFERS_NAV).get_attribute("innerHTML")
+        return self.driver.find_element(*HomePageLocator.TRAMSFERS_NAV)
     def is_business_matches(self):
-        return "ბიზნესისთვის" == self.driver.find_element(*HomePageLocator.BUSINESS_NAV).get_attribute("innerHTML")
+        return self.driver.find_element(*HomePageLocator.BUSINESS_NAV)
     def is_abroad_matches(self):
-        return "გადაიხადე უცხოეთიდან" == self.driver.find_element(*HomePageLocator.ABROAD_NAV).get_attribute("innerHTML")
+        return self.driver.find_element(*HomePageLocator.ABROAD_NAV)
 
     def is_sidebar_found(self):
         return self.driver.find_element(*HomePageLocator.SIDEBAR)
